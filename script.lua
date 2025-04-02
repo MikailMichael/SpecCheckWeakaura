@@ -1,6 +1,5 @@
 C_Timer.After(2, function()  -- Delays execution to ensure UI loads fully
         local loadoutName = ""
-        local isHoldingCtrl = false
         local holdTime = 0
         local requiredHoldTime = 1  -- Seconds
         local targetIcon = "|TInterface\\TargetingFrame\\UI-RaidTargetingIcon_1:16|t" -- Star icon
@@ -32,7 +31,6 @@ C_Timer.After(2, function()  -- Delays execution to ensure UI loads fully
         -- Function to get loadout name
         local function GetLoadoutName()
             local specID = PlayerUtil.GetCurrentSpecID()
-            local specName = GetSpecializationNameForSpecID(specID) or "Unknown Spec"
             local configID = C_ClassTalents.GetLastSelectedSavedConfigID(specID)
             local configInfo = C_Traits.GetConfigInfo(configID)
             loadoutName = configInfo.name or "Unknown Name"
