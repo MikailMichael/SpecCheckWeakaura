@@ -32,8 +32,8 @@ C_Timer.After(2, function()  -- Delays execution to ensure UI loads fully
         local function GetLoadoutName()
             local specID = PlayerUtil.GetCurrentSpecID()
             local configID = C_ClassTalents.GetLastSelectedSavedConfigID(specID)
-            local configInfo = C_Traits.GetConfigInfo(configID)
-            loadoutName = configInfo.name or "Unknown Name"
+            local configInfo = configID and C_Traits.GetConfigInfo(configID)
+            loadoutName = configInfo and configInfo.name or "Unknown Name"
             ReadyCheckFrameText:SetText("Current Spec: " .. targetIcon .. " " .. loadoutName .. " " .. targetIcon .. "\n\nHold down CTRL for 1 sec to Ready") -- Surrounds loadout in stars
         end
         
