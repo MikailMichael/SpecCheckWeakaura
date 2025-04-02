@@ -42,6 +42,11 @@ C_Timer.After(2, function()  -- Delays execution to ensure UI loads fully
             ReadyCheckFrame:SetHeight(160)
             
             ReadyCheckFrameYesButton:Disable()  -- Disable "Ready" button initially
+            if UnitIsGroupLeader("player") then
+                _G.Env.changeTalents:Hide()
+            else
+                _G.Env.changeTalents:Show()
+            end
             _G.Env.changeTalents:SetPoint("BOTTOM", ReadyCheckFrameText, "BOTTOM", 0, -34)
             _G.Env.changeTalents:SetSize(ReadyCheckFrameNoButton:GetWidth(), 30)
             _G.Env.changeTalents:SetText("Change Talents")
