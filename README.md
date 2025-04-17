@@ -50,3 +50,8 @@ The Lua script listens for a ready check event and:
 1. **Open WeakAuras** in World of Warcraft (`/wa` command).
 2. **Import Aura** Import from this link here: [SpecCheck Weakaura](https://wago.io/eD5sDN_g9) by copying the import string.
 3. **Relog** and it will now load everytime you log in. That's it!
+
+## 📬 Contact
+Mikail Deveden
+[Github](https://github.com/MikailMichael)
+[LinkedIn](https://www.linkedin.com/in/mikail-deveden/)
